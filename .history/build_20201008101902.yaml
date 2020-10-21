@@ -1,0 +1,9 @@
+builders:
+
+  sealed_classes_generator:
+    import: "package:sealed_classes_generator/builder.dart"
+    builder_factories: ["sealedBuilder"]
+    build_extensions: {".dart": [".g.part"]}
+    auto_apply: dependents
+    build_to: cache
+    applies_builders: ["source_gen|combining_builder"]
