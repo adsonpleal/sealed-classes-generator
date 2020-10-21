@@ -28,9 +28,9 @@ part 'main_event.g.dart';
 
 @sealed
 class MainEvent {
-  const factory MainEvent.start() = MainEventStart;
-  const factory MainEvent.triggerError(String message) = MainEventTriggerError;
-  const factory MainEvent.back() = MainEventBack;
+  const factory MainEvent.start() = MainEventStart._;
+  const factory MainEvent.triggerError(String message) = MainEventTriggerError._;
+  const factory MainEvent.back() = MainEventBack._;
 }
 ```
 
@@ -51,14 +51,14 @@ part of 'main_event.dart';
 // **************************************************************************
 
 class MainEventStart extends Equatable implements MainEvent {
-  const MainEventStart();
+  const MainEventStart._();
 
   @override
   List<Object> get props => [];
 }
 
 class MainEventTriggerError extends Equatable implements MainEvent {
-  const MainEventTriggerError(
+  const MainEventTriggerError._(
     this.message,
   );
 
@@ -69,7 +69,7 @@ class MainEventTriggerError extends Equatable implements MainEvent {
 }
 
 class MainEventBack extends Equatable implements MainEvent {
-  const MainEventBack();
+  const MainEventBack._();
 
   @override
   List<Object> get props => [];

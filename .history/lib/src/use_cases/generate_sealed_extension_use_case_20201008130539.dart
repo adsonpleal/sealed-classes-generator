@@ -1,5 +1,0 @@
-class GenerateSealedExtensionUseCase {
-  String call() {
-    
-  }
-}

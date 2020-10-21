@@ -20,6 +20,6 @@ class GenerateClassConstructorUseCase {
     final parameters = constructor.parameters;
     final fullConstructorParams = _generateFullConstructorParams(parameters);
     final constDeclaration = _generateConstDeclaration(constructor.isConst);
-    return "$constDeclaration $className($fullConstructorParams);";
+    return "$constDeclaration $className._($fullConstructorParams);";
   }
 }

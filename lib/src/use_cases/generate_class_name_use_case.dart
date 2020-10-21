@@ -5,7 +5,7 @@ class GenerateClassNameUseCase {
     final parent = constructor.returnType.getDisplayString();
     final name = constructor.name;
     final declarationRegex = RegExp(
-      '$parent\\.$name\\((?:[^;]|\\n)*\\) ?= ?(.*);',
+      '$parent\\.$name\\((?:[^;]|\\n)*\\) ?= ?(.*)\._;',
     );
     return declarationRegex
         .firstMatch(constructor.source.contents.data)

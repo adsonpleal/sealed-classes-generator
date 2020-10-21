@@ -7,14 +7,14 @@ part of 'main_event.dart';
 // **************************************************************************
 
 class MainEventStart extends Equatable implements MainEvent {
-  const MainEventStart();
+  const MainEventStart._();
 
   @override
   List<Object> get props => [];
 }
 
 class MainEventTriggerError extends Equatable implements MainEvent {
-  const MainEventTriggerError(
+  const MainEventTriggerError._(
     this.message,
   );
 
@@ -25,7 +25,7 @@ class MainEventTriggerError extends Equatable implements MainEvent {
 }
 
 class MainEventBack extends Equatable implements MainEvent {
-  const MainEventBack();
+  const MainEventBack._();
 
   @override
   List<Object> get props => [];

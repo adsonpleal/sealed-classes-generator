@@ -7,21 +7,21 @@ part of 'main_state.dart';
 // **************************************************************************
 
 class MainStateInitial extends Equatable implements MainState {
-  const MainStateInitial();
+  const MainStateInitial._();
 
   @override
   List<Object> get props => [];
 }
 
 class MainStateLoading extends Equatable implements MainState {
-  const MainStateLoading();
+  const MainStateLoading._();
 
   @override
   List<Object> get props => [];
 }
 
 class MainStateError extends Equatable implements MainState {
-  const MainStateError(
+  const MainStateError._(
     this.error,
   );
 
@@ -32,7 +32,7 @@ class MainStateError extends Equatable implements MainState {
 }
 
 class MainStateFinished extends Equatable implements MainState {
-  const MainStateFinished(
+  const MainStateFinished._(
     this.message, {
     this.value,
   });
