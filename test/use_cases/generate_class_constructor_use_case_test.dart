@@ -41,7 +41,7 @@ void main() {
 
     final actual = useCase(constructor);
 
-    expect(actual, "$constDeclaration $className($fullConstructorParams);");
+    expect(actual, "$constDeclaration $className._($fullConstructorParams);");
     verify(generateFullConstructorParams(parameters)).called(1);
     verify(generateClassName(constructor)).called(1);
     verify(generateConstDeclaration(isConst)).called(1);

@@ -23,14 +23,14 @@ void main() {
     const factory $className.$name({
       fakeParam1: 'fake1',
       fakeParam2: 'fake2',
-    }) = $expectedClassName;
-    const factory $className.initial() = ${className}Initial;
-    const factory $className.loading() = ${className}Loading;
-    const factory $className.error(SomeError error) = ${className}Error;
+    }) = $expectedClassName._;
+    const factory $className.initial() = ${className}Initial._;
+    const factory $className.loading() = ${className}Loading._;
+    const factory $className.error(SomeError error) = ${className}Error._;
     const factory $className.finished(
       String message, {
       @required int value,
-    }) = ${className}Finished;
+    }) = ${className}Finished._;
     """;
 
     when(constructor.returnType).thenReturn(returnType);
@@ -64,7 +64,7 @@ void main() {
     const name = 'fakeName';
     const expectedClassName = 'FakeClassName';
     const sourceCode =
-        """const factory $className.$name() = $expectedClassName;""";
+        """const factory $className.$name() = $expectedClassName._;""";
 
     when(constructor.returnType).thenReturn(returnType);
     when(constructor.name).thenReturn(name);
